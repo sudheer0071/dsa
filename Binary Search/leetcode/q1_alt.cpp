@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+// ************************************************* without using Binary Search *************************************************
+
 void first_and_last_occ(int arr[], int n, int k){
   for (int i = 0; i < n; i++)
   {
@@ -22,6 +24,8 @@ void first_and_last_occ(int arr[], int n, int k){
   }
   
 }
+
+
  
 int main()
 {

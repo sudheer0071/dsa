@@ -3,22 +3,18 @@ using namespace std;
 
 int getPivot(int arr[], int n){
    int s = 0, e = n -1;
-   int mid = s + (e-s)/2;
-   while (s<e)    
-   {
-
-    if (arr[mid] >= arr[0])
+   int mid = s + (e-s)/2; 
+   while (s<e)
+   { 
+    if (arr[mid]>=arr[0])
     {
       s = mid+1;
     }
-    else
-    {
-       e=mid;
+    else{
+      e=mid;
     }
-    mid = s + (e-s)/2;
-
+     mid = s + (e-s)/2; 
    }
-   
    return s;
 }
 
@@ -64,7 +60,7 @@ int main()
   int b[5] = {7,8,10,1,2};
 
   // int ind = binaraSearch(a,6, 4);
-  int ind = search(b, 5, 2);
-  cout<< "Pivot element is at index :" << ind<< endl; 
+  int ind = search(b, 5, 8);
+  cout<< "key is at index :" << ind<< endl; 
   return 0;
 }

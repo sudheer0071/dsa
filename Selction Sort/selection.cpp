@@ -24,7 +24,7 @@ int printarray(int arr[], int n){
 
 int main()
 {
-  int a[5] = {5,3,1,6,4};
+  int a[5] = {5,3,1,6,8};
   cout<<"Before sort: ";
    printarray(a,5);
   

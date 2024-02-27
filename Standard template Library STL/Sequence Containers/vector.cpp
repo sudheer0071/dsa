@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
  
-
+ 
 // ********** vector is a dynamic array **********
 int main()
 {

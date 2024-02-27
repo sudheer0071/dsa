@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
   list <int> l;
-
+ 
 list <int> n(5,100);
 cout<<"Printing n"<<endl;
 for(int i:n){

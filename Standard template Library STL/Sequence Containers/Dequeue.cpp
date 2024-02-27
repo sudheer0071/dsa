@@ -9,7 +9,7 @@ int main()
   d.push_front(2);
   for(int i:d){
     cout<<i<<" ";
-  }
+  } 
   // d.pop_back();
   // cout<<endl;
   // for(int i:d){

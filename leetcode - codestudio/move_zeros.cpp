@@ -10,8 +10,7 @@ void move_zeros(int arr[], int n){
       swap(arr[j], arr[nonzero]);
       nonzero++;
     } 
-  }
-  
+  } 
 }
  
  void printarray(int arr[],int n){

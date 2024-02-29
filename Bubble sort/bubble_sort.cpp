@@ -17,7 +17,6 @@ int bubble_sort(int arr[], int n){
       // already sorted
         break;
     }
-    
   } 
 }
 

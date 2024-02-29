@@ -12,11 +12,9 @@ int bubble_sort(int arr[], int n){
         swapped = true;
     }  
     //************************* OPTIMIZATION *************************
-    if (swapped == false)
-    {
+    if (swapped == false) 
       // already sorted
-        break;
-    }
+        break; 
   } 
 }
 

@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
  
-voic dummy(){
+void dummy(){
   int n;
   n++;
   cout << 

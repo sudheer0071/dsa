@@ -1,7 +1,7 @@
  #include <iostream>
  using namespace std;
   
-  
+
 int insertion_sort(int arr[], int n){
   for (int i = 0; i < n-1; i++)
   {
@@ -30,8 +30,7 @@ int printarray(int arr[], int n){
   cout<<endl;
 }
 
-int main()
-{
+int main(){
   int a[5] = {5,3,1,6,8};
   cout<<"Before sort: ";
    printarray(a,5); 

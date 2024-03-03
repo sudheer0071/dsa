@@ -20,7 +20,6 @@ int insertion_sort(int arr[], int n){
     }
     arr[j+1]=temp;
   }
-  
 }
 int printarray(int arr[], int n){
   for (int i = 0; i < n; i++)

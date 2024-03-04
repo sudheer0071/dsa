@@ -13,7 +13,7 @@ int selection_sort(int arr[], int n){
     swap(arr[min], arr[i]);
    }
 }
-
+ 
 int printarray(int arr[], int n){
   for (int i = 0; i < n; i++)
   {

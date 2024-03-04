@@ -26,6 +26,7 @@ int main()
 {
   int a[5] = {5,3,1,6,8};
   cout<<"Before sort: ";
+  
    printarray(a,5);
   selection_sort(a,5);
   cout<<"After sort: ";

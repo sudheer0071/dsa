@@ -31,7 +31,7 @@ int main()
     vector<int>a = {4,5,6,7,8,9};
   rotate(a,2);
   printarray(a);
-  // cout<<10%6;
+  
   return 0;
   
 }

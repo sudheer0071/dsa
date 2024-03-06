@@ -1,18 +1,26 @@
 #include <iostream>
+#include <vector>
 using namespace std;
- 
-void rotateArray(int arr[],int n, int k){
 
-  int temp[n];
-  for (int i = 0; i < n; i++)
-  {
-    temp[(i+k)%n] = arr[i];
-  }
-  arr = temp;
-}
  
- void printarray(int arr[],int n){
-   for (int i = 0; i < n; i++)
+void rotate(vector<int>& nums, int k) {
+      
+    // just to practice the modulus approach
+      int n = nums.size();
+      vector<int> temp(n);
+       
+      for(int i =0;i<n;i++) { 
+        temp[(i+k)%n] = nums[i]; 
+      }
+       
+      for(int i=0;i<nums.size();i++) 
+      {
+        nums[i] = temp[i];
+      } 
+    }
+ 
+ void printarray(vector<int>arr){
+   for (int i = 0; i < arr.size(); i++)
    {
     cout<<arr[i] << " ";
    }
@@ -20,9 +28,10 @@ void rotateArray(int arr[],int n, int k){
 
 int main()
 {
-    int a[6] = {4,5,6,7,8,9};
-  rotateArray(a,6,2);
-  printarray(a,5);
+    vector<int>a = {4,5,6,7,8,9};
+  rotate(a,2);
+  printarray(a);
+  // cout<<10%6;
   return 0;
   
 }

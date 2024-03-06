@@ -5,7 +5,7 @@ using namespace std;
  
 void rotate(vector<int>& nums, int k) {
       
-    // just to practice the modulus approach
+    
       int n = nums.size();
       vector<int> temp(n);
        

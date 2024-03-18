@@ -96,7 +96,7 @@ void printarr(int arr[][3], int a, int b){
   {
     for (int j = 0; j < b; j++)   
     {
-      cout<< arr[i][j]<<"   ";
+      cout<< arr[i][j]<<" ";
     } 
     cout<<endl;
   }

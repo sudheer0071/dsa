@@ -20,8 +20,7 @@ void printWave(int arr[][4], int a, int b){
     }
    }
       }
-    cout<<endl;
-   
+    cout<<endl; 
 }
 
 void printarr(int arr[][4], int a, int b){ 

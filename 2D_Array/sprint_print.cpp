@@ -104,8 +104,6 @@ void printarr(int arr[][3], int a, int b){
 int main()
 {
   int arr[3][3] = {1,2,3,4,5,6,7,8,9 };
-  printarr(arr, 3,3);  
-  // cout<<3&&1;
-  printWave(arr, 3,3);
+  printarr(arr, 3,3);   
   return 0;
 }

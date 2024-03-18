@@ -14,7 +14,7 @@ int countPrime(int n){
   }
     return count; 
 }
-
+ 
 int main()
 {
   cout<<countPrime(10);

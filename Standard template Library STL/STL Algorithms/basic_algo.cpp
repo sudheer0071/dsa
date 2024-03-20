@@ -19,8 +19,7 @@ int main()
   int a = 3;
   int b = 5;
 
-  // cout<<max(a,b);
-  // cout<<min(a,b);
+ 
   // swap
   string abcd = "abcd";
   reverse(abcd.begin(),abcd.end());

@@ -18,7 +18,6 @@ int main()
   
   int a = 3;
   int b = 5;
-
  
   // swap
   string abcd = "abcd";

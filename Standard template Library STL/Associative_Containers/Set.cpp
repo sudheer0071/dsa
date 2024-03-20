@@ -34,7 +34,8 @@ set<int>::iterator itr = s.find(3);
 for(auto it=itr;it!=s.end(); it++){
   cout<<*it<<" ";
 
-}cout<<endl;
+}
+cout<<endl;
 
   return 0;
 }

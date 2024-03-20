@@ -7,8 +7,9 @@ int main()
 {
   //*************** normal array ***************
   int basic[4] = {3,5,6,7};
-  
+
   //*************** STL array ***************
+  
  array<int, 4> a = {1,2,3,4};
 int size = a.size();
  for (int i = 0; i < size; i++)

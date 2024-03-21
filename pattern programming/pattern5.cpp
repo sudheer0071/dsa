@@ -27,8 +27,7 @@ for n = 3   ane
 //   }
 //   return 0;
 // }
-
-
+ 
 /* pattern like this 
 for n = 3  
     A B C 

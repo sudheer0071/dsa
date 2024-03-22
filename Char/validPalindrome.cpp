@@ -24,7 +24,6 @@ char toLowerCase(char ch)
   }
 }
 
-
 bool checkPalindrone(string a, int n)
 {
   int s = 0;

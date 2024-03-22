@@ -14,8 +14,7 @@ bool checkEqual(int a[26], int b[26]){
   
 }
 
-bool checkInclusion(string s1, string s2){
-
+bool checkInclusion(string s1, string s2){ 
   // character count array
   int count[26]={0};
   for (int i = 0; i < s1.length(); i++)

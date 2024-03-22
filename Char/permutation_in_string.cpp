@@ -23,8 +23,8 @@ bool checkInclusion(string s1, string s2){
     count[index]++;
   }
 
-// traverse s2 string in window of size s1 length and compare
 
+// traverse s2 string in window of size s1 length and compare
 // running for first window
 int i=0;
 int windowSize = s1.length();

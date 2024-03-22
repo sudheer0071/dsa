@@ -58,8 +58,7 @@ while (i<windowSize)
     if (checkEqual(count, count2))
     {
       return 1;
-    }
-    
+    } 
   }
   return 0;
 } 

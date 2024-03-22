@@ -41,7 +41,7 @@ while (i<windowSize)
   {
     return 1;
   }
-  
+   
   // traverse window
   while (i<s2.length())
   {

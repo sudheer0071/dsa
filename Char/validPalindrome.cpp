@@ -63,6 +63,7 @@ bool isPalindrone(string s)
   return checkPalindrone(temp, temp.length());
 }
 
+
 int main()
 {
   string str = "race a car";

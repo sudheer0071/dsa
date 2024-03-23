@@ -50,7 +50,7 @@ vector<int> sumArray(vector<int>&a, int n, vector<int>&b, int m ){
      ans.push_back(sum);
      j--;
   }
-  
+
 // third case  
 while (carry!=0) 
 {

@@ -47,7 +47,7 @@ void print(int arr[], int n).
    }
    cout << endl;
 }
-
+ 
 int main()
 {
    int a[5] = {1, 4, 6, 8, 13};

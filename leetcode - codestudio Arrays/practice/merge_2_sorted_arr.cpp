@@ -50,7 +50,7 @@ void print(int arr[], int n).
  
 int main()
 {
-   int a[5] = {1, 4, 6, 8, 13};
+   int a[5] = {1, 4, 6, 8, 13}; 
    int b[4] = {2, 3, 5, 7};
    int c[10] = {0};
 

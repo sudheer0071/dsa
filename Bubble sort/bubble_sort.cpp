@@ -25,6 +25,7 @@ int printarray(int arr[], int n){
   }
   cout<<endl;
 } 
+
 int main()
 {
   int a[6] = {10,1,7,6,14,9};

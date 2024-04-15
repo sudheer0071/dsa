@@ -10,7 +10,7 @@ int bubble_sort(int arr[], int n){
       if (arr[j]>arr[j+1]) 
         swap(arr[j],arr[j+1]);  
         swapped = true;
-    }  
+    }   
     //************************* OPTIMIZATION *************************
     if (swapped == false) 
       // already sorted

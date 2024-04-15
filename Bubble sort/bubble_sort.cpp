@@ -31,7 +31,6 @@ int main()
   int a[6] = {10,1,7,6,14,9};
   cout<<"Before sort: ";
    printarray(a,6);
-  
   bubble_sort(a,6);
   cout<<"After sort: ";
   printarray(a,6);

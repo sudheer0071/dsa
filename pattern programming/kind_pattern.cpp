@@ -29,7 +29,6 @@ int main()
       cout << count << " ";
       count--;
     }
-
     cout << endl;
   }
 

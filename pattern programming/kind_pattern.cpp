@@ -23,7 +23,7 @@ int main()
       cout << " *";
     }
     cout << " ";
-    int count = n - i;
+    int count = n - i; 
     for (j = 1; j <= n - i; j++)
     {
       cout << count << " ";

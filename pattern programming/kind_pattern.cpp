@@ -13,7 +13,6 @@ int main()
     {
       cout << " " << j;
     }
-
     for (j = 1; j <= i; j++)
     {
       cout << " *";

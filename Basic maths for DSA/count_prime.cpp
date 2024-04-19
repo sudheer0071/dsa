@@ -15,7 +15,6 @@ int countPrime(int n){
   }
     return count; 
 } 
- 
 int main()
 
 { 

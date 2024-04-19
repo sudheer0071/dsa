@@ -17,6 +17,7 @@ int countPrime(int n){
 } 
  
 int main()
+
 { 
   cout<<countPrime(10);
   // cout<<7%2;

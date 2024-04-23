@@ -2,43 +2,43 @@
 #include <vector>
 using namespace std;
  
-void printWave(int arr[][3], int a, int b){
-  int count = 0;
-   for (int i = count; i < a; i++)
-   {
-    for (int j = 0; j < b; j++)
-    {
-      cout<<arr[i][j]<<" ";
-    }   
-      count++;
-      break;
-  }
-   for (int i = b-1; i >= 0; i--)
-   {
-    for (int j = count; j < a; j++)
-    {
-      cout<<arr[j][i]<<" ";
-    }   
-    break;
-  }
-   for (int i = a-1; i >= 0; i--)
-   {
-    for (int j = b-1; j >=0; j--)
-    {
-      cout<<arr[i][j]<<" ";
-    }   
-    break;
-  } 
-      for (int i = 0; i < b; i++)
-   {  
-    for (int j = a-2; j >0; j--)
-    {
-      cout<<arr[j][i]<<" ";
-    }
-    break;
-      } 
-    cout<<endl;
-}
+// void printWave(int arr[][3], int a, int b){
+//   int count = 0;
+//    for (int i = count; i < a; i++)
+//    {
+//     for (int j = 0; j < b; j++)
+//     {
+//       cout<<arr[i][j]<<" ";
+//     }   
+//       count++;
+//       break;
+//   }
+//    for (int i = b-1; i >= 0; i--)
+//    {
+//     for (int j = count; j < a; j++)
+//     {
+//       cout<<arr[j][i]<<" ";
+//     }   
+//     break;
+//   }
+//    for (int i = a-1; i >= 0; i--)
+//    {
+//     for (int j = b-1; j >=0; j--)
+//     {
+//       cout<<arr[i][j]<<" ";
+//     }   
+//     break;
+//   } 
+//       for (int i = 0; i < b; i++)
+//    {  
+//     for (int j = a-2; j >0; j--)
+//     {
+//       cout<<arr[j][i]<<" ";
+//     }
+//     break;
+//       } 
+//     cout<<endl;
+// }
 
 
   //  vector<int> spiralOrder(vector<vector<int> >& matrix) { 

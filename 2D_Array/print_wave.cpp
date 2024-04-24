@@ -19,7 +19,7 @@ void printWave(int arr[][4], int a, int b){
       cout<<arr[j][i]<<" ";
     }
    }
-      }
+      } 
     cout<<endl; 
 }
 

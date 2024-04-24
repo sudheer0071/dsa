@@ -4,7 +4,7 @@ using namespace std;
  
 void printWave(int arr[][4], int a, int b){
    for (int i = 0; i < b; i++)
-   {
+   { 
     int sum = 0;
       if (i%2==0)
       {

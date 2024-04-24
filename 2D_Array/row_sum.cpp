@@ -27,6 +27,7 @@ void printarr(int arr[][3], int a, int b){
     cout<<endl;
   }
 }
+
 int main()
 {
   int arr[3][3] = {1,2,3,4,5,6,7,8,9};

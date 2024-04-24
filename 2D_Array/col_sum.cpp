@@ -12,8 +12,7 @@ int colSum(int arr[][4], int row, int col){
       sum+=arr[j][i];
     }
       cout<<sum<<" ";
-  } 
-  //  cout<<endl;
+  }  
 }
 
 void printarr(int arr[][4], int a, int b){

@@ -8,6 +8,7 @@ int main()
   s.push("john");
   s.push("wick");
   s.push("legend");
+  s.emplace('actor');
   cout<<"Top Element: "<<s.top()<<endl;
    s.size();
    s.pop();

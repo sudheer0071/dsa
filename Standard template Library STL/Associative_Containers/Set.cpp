@@ -31,7 +31,7 @@ cout<<s.count(3)<<endl;
 
 set<int>::iterator itr = s.find(3);
 for(auto it=itr;it!=s.end(); it++){
-  cout<<*it<<" ";
+  cout<<*(it)<<" ";
 
 }
 cout<<endl;

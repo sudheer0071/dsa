@@ -5,26 +5,35 @@
 using namespace std;
 
 int gcd(int n, int m){
-  int gcd;
-  for (int i = 1; i < max(m,n); i++)
-  {
-    if (n%i==0 && m%i==0)
-    {
-      gcd = i;
-    }
+  int a =n; 
+  int b =m;
+  // int gcd;
+  // for (int i = min(n,m); i > 0; i--)
+  // {
+  //   if (n%i==0 && m%i==0)
+  //   {
+  //     gcd = i;
+  //     break;
+  //   }
     
-  }
-  cout<<gcd;
+  // }
+  // cout<<gcd;
 
 //  better approach
 // by using Euclidian Algorithm
 
-
-
+while (a>0 && b>0)
+{
+  if (a>b) a = a%b; 
+  else b = b%a; 
+}
+if (a==0)  cout<<b; 
+else  cout<<a; 
 } 
 
 int main()
 {
-  gcd(11,13);
+  gcd(40,20);
+  // cout<<9%12;
   return 0;
 } 

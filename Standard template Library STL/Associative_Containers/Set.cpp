@@ -35,6 +35,6 @@ for(auto it=itr;it!=s.end(); it++){
 
 }
 cout<<endl;
-
+auto it = s.find(9);
   return 0;
 }

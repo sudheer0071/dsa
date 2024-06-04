@@ -82,10 +82,7 @@ for n = 3
 //   }
 //   return 0;
 // }
-
-
-
-
+ 
 /* pattern like this 
 for n = 4  
     D 

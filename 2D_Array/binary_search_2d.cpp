@@ -21,7 +21,7 @@ int binarySearch_2D(int arr[][4], int row, int col, int key){
         s = mid+1;
       }
       mid = (e-s)/2;
-    }
+    } 
     
 }  
 void printarr(int arr[][3], int a, int b){ 

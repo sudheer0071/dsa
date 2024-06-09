@@ -16,7 +16,7 @@ int binarySearch_2D(int arr[][4], int row, int col, int key){
       else if (key<arr[mid/col][mid%col])
       {
          e = mid-1;
-      }
+      } 
       else{
         s = mid+1;
       }

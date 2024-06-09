@@ -4,7 +4,7 @@ using namespace std;
  
 int binarySearch_2D(int arr[][4], int row, int col, int key){
     int s=0;
-    int e= row*col -1;
+    int e= row*col -1; 
     int mid = (e-s)/2;
     
     while (s<e)

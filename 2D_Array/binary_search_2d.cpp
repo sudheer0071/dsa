@@ -7,7 +7,7 @@ int binarySearch_2D(int arr[][4], int row, int col, int key){
     int e= row*col -1; 
     int mid = (e-s)/2;
     
-    while (s<e)
+    while (s<e)  
     {
       if (key==arr[mid][3])
       {

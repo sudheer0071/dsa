@@ -26,8 +26,53 @@ using namespace std;
 //    } 
 // }
 
-// Optimal Approach Two Pointer
+// Optimal Approach Two Pointer Approach
 int unionn(int arr1[], int arr2[], int n , int m){
+  int i=0;
+  int j=0;
+  vector<int> uinonn;
+  while (i<n&&j<m)
+  {
+    if (arr1[i]<=arr2[j])
+    {
+       if (uinonn.size()==0||uinonn.back()!=arr1[i])
+       {
+        uinonn.push_back(arr1[i]);
+       }
+        i++;
+       
+    }
+        // cout<<"inside";
+    
+    if (arr2[j]<=arr1[i])
+    {
+       if (uinonn.size()==0||uinonn.back()!=arr2[j])
+       {
+         uinonn.push_back(arr2[j]);
+       }
+        j++;
+       
+    }
+      
+  }
+  
+  while (j<m)
+  {
+     if (uinonn.size()==0||uinonn.back()!=arr2[j])
+       {
+        uinonn.push_back(arr2[j]);
+       }
+        j++;
+  }
+  while (i<n)
+  {
+     if (uinonn.size()==0||uinonn.back()!=arr1[i])
+       {
+        uinonn.push_back(arr1[i]);
+       }
+        i++;
+  }
+  
 
   for (int i = 0; i < uinonn.size(); i++)
   {

@@ -27,29 +27,29 @@ using namespace std;
 // }
 
 // Better Approach =  using Maps, slightly better than hash 
-// int one_occurence(int arr[], int n){ 
-//    map<int, int> map; 
-//   for (int i = 0; i < n; i++)
-//   { 
-//     map[arr[i]]++; // time complexity here is O(N*logN)
-//   }
-//  for (auto it:map)
-//  { 
-//   if (it.second==1) return it.first;
-//   //  cout<<"i = "<<i<<" : "<<hash[i]<<endl;
-//  } 
-// return -1;
-// }
+int one_occurence(int arr[], int n){ 
+   map<int, int> map; 
+  for (int i = 0; i < n; i++)
+  { 
+    map[arr[i]]++; // time complexity here is O(N*logN)
+  }
+ for (auto it:map)
+ { 
+  if (it.second==1) return it.first;
+  //  cout<<"i = "<<i<<" : "<<hash[i]<<endl;
+ } 
+return -1;
+}
 
 // Optimal Approach = using XOR
-int one_occurence(int arr[],  int n){
-    int xr = 0;
-    for (int i = 0; i < n; i++)
-    {
-      xr = xr^arr[i];
-    }
-    return xr;
-}
+// int one_occurence(int arr[],  int n){
+//     int xr = 0;
+//     for (int i = 0; i < n; i++)
+//     {
+//       xr = xr^arr[i];
+//     }
+//     return xr;
+// }
 
 int main()
 {

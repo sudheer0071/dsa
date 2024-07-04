@@ -27,11 +27,12 @@ int longest_subarray(int arr[],int n, int k){
       cout<<"insidee"<<endl;
        if (arr[i]>0)
        {
-         flag = true;
+         flag = true; 
       idx = 0;
       count=0;
       sum=0;
        } 
+       idx=temp;
     } 
     
     sum+=arr[i]; 
@@ -40,8 +41,8 @@ int longest_subarray(int arr[],int n, int k){
     cout<<"count = "<<count<<endl;
   }
   idx = max(idx, count);   
-  cout<<"flag = "<<flag<<endl; 
-  return flag&&temp?idx:0;
+  cout<<"temp = "<<temp<<endl;  
+  return flag?idx:0;
 }
 
 int main()
@@ -51,11 +52,11 @@ int main()
 //  int arr[10] =  {-7,-11,-3,-7,4,15,-13,18,-10,-10};
 //  int arr[17] =  {-13,0,6,15,16,2,15,-12,17,-16,0,-3,19,-3,2,-9,-6};
 //  int arr[17] =  {-1,2,3}; 
-//  int arr[8] =  {8,-9,10,-2,-10,6,18,17}; 
+ int arr[8] =  {8,-9,10,-2,-10,6,18,17}; 
 //  int arr[13] =  {0,-16,-19,-12,6,12,-11,-15,-3,-9,6,-19,12}; 
- int arr[8] =  {1,2,1,2,1}; 
+//  int arr[8] =  {1,2,1,2,1}; 
 
 
-  cout<< longest_subarray(arr,6,4);
+  cout<< longest_subarray(arr,8,17);
   return 0;
 }

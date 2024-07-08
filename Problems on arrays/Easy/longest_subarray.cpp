@@ -22,52 +22,52 @@ using namespace std;
 // }
  
 // My approach 
-int longest_subarray(int arr[],int n, int k){
-  int idx=0, count=0;
-  int sum = 0;
-  bool flag=false;
-  int temp=0;
-  for (int i = 0; i < n; i++)
-  {
-    sum+=arr[i]; 
-    count++; 
-    cout<<"sum = "<<sum<<endl;
-    cout<<"count = "<<count<<endl; 
-    if (sum==k||arr[i]==0)
-    { 
-    if (arr[i+1]==0)
-    {
-      count++;
-    }
-   else{
-      flag = true;  
-      cout<<"idx = "<<idx<<endl;
-      if (count>=idx)
-      {
-      idx = count;
-      }
-      // i=i-1;   
-      temp = idx;
-      count=0;
-      sum=0;
-   }
-    }
-    if (sum>k)
-    {  
-      cout<<"insidee"<<endl;
-       if (arr[i]>0)
-       {
-         flag = true; 
-      idx = 0;
-      count=0;
-      sum=0;
-       } 
-       idx=temp;
-    }  
-  }
-  idx = max(idx, count);   
-  return flag?idx:0;
-}
+// int longest_subarray(int arr[],int n, int k){
+//   int idx=0, count=0;
+//   int sum = 0;
+//   bool flag=false;
+//   int temp=0;
+//   for (int i = 0; i < n; i++)
+//   {
+//     sum+=arr[i]; 
+//     count++; 
+//     cout<<"sum = "<<sum<<endl;
+//     cout<<"count = "<<count<<endl; 
+//     if (sum==k||arr[i]==0)
+//     { 
+//     if (arr[i+1]==0)
+//     {
+//       count++;
+//     }
+//    else{
+//       flag = true;  
+//       cout<<"idx = "<<idx<<endl;
+//       if (count>=idx)
+//       {
+//       idx = count;
+//       }
+//       // i=i-1;   
+//       temp = idx;
+//       count=0;
+//       sum=0;
+//    }
+//     }
+//     if (sum>k)
+//     {  
+//       cout<<"insidee"<<endl;
+//        if (arr[i]>0)
+//        {
+//          flag = true; 
+//       idx = 0;
+//       count=0;
+//       sum=0;
+//        } 
+//        idx=temp;
+//     }  
+//   }
+//   idx = max(idx, count);   
+//   return flag?idx:0;
+// }
  
 // Optimal Approach 1
 // int longest_subarray(int arr[], int n, int k){
@@ -94,9 +94,9 @@ int longest_subarray(int arr[],int n, int k){
 // }
 
 // Optimal Approach 2
-// int longest_subarray(int arr[], int n, int k){
+int longest_subarray(int arr[], int n, int k){
   
-// }
+}
 
 int main()
 {

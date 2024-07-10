@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <map>
 using namespace std;
 
 
@@ -93,8 +94,33 @@ using namespace std;
 //   return maxlen;
 // }
 
-// Optimal Approach 2
+// Optimal Approach 2 -- Hashing
 int longest_subarray(int arr[], int n, int k){
+  map<int, int> preSumMap;
+  int sum=0;
+  int maxlen=0;
+  for (int i = 0; i < n; i++)
+  {
+    sum+=arr[i];
+    if (sum==k)
+    {
+      maxlen = max(maxlen,i+1);
+    }
+
+    int rem = sum-k;
+
+    if (preSumMap.find(rem)!=preSumMap.end())
+    { cout<<preSumMap[rem]<<endl;
+      int len = i - preSumMap[rem];
+      maxlen = max(maxlen,len);
+    }
+
+    if (preSumMap.find(sum)==preSumMap.end())
+    {
+       preSumMap[sum]=i;
+    }  
+  }
+  return maxlen;
   
 }
 
@@ -109,11 +135,11 @@ int main()
 //  int arr[13] =  {0,-16,-19,-12,6,12,-11,-15,-3,-9,6,-19,12}; 
 //  int arr[8] =  {1,2,1,2,1}; 
 //  int arr[10] =  {1,2,3,1,1,1,1,4,2,3}; 
-int arr[3] = {-1,1,1};
-// int arr[4] = {2,0,0,3};
+// int arr[3] = {-1,1,1};
+int arr[4] = {2,0,0,3};
 
 
-  cout << longest_subarray(arr,3,1);
+  cout << longest_subarray(arr,4,3);
   return 0;
 }
  

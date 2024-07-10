@@ -120,6 +120,7 @@ int longest_subarray(int arr[], int n, int k){
        preSumMap[sum]=i;
     }  
   }
+  
   return maxlen;
   
 }

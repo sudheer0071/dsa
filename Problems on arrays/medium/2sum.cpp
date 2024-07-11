@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <map>
+#include<algorithm>
 using namespace std;
 
 // brute force 
@@ -23,52 +24,55 @@ using namespace std;
 // } 
 
 // Better Approach - HashMaps
-// int twoSum(int arr[],int n, int t){
-//    map<int, int> sum;
-//    int rem;
-//    for (int i = 0; i < n; i++)
-//    {  
-//     int rem = t - arr[i];
-//     if (sum.find(rem) != sum.end())
-//     {
-//       cout<<"["<<sum[rem]<<", "<<i<<"]";
-//       return 1;
-//     }
-//     sum[arr[i]] = i;
-//    }
-//    return -1;
-// } 
-
-
-// Optimal Appraoch - Two Pointer
 int twoSum(int arr[],int n, int t){
-    int l = 0; int r=n-1;
-     while (l<r)
-     {
-      int sum = arr[l]+arr[r];
-      if (sum==t)
-      {
-         cout<<"["<<l<<", "<<r<<"]";
-         return 1;
-      }
-      else if (sum<t)
-      {
-        l++;
-      }else{
-        r--;
-      }
-      
-     }
-     return -1;
+   map<int, int> sum;
+   int rem;
+   for (int i = 0; i < n; i++)
+   {  
+    int rem = t - arr[i];
+    if (sum.count(rem))
+    {
+      cout<<"["<<sum[rem]<<", "<<i<<"]";
+      return 1;
+    }
+    sum[arr[i]] = i;
+   }
+   return -1;
 } 
+
+
+// // Optimal Appraoch - Two Pointer
+// int twoSum(int arr[],int n, int t){
+//     int l = 0; int r=n-1;
+//     int temp[n];
+//      sort(arr,arr+n);
+//      while (l<r)
+//      {
+//       int sum = arr[l]+arr[r];
+      
+//       if (sum==t)
+//       {
+//          cout<<"["<<l<<", "<<r<<"]";
+//          return 1;
+//       }
+//       else if (sum<t)
+//       {cout<<"l++"<<endl;
+//         l++;
+//       }else{
+//         r--;
+//       }
+      
+//      }
+//      return -1;
+// } 
 
 
 int main()
 {
-  int arr[5] = {2,6,5,8,11}; 
+  int arr[5] = {2,6,5,8,4}; 
   // vector<int> ans  = twoSum(arr,5,14);
 
   // cout<<"["<<ans[0]<<", "<<ans[1]<<"]";
-  twoSum(arr,5,144);
+  twoSum(arr,5,14);
   return 0;
 }

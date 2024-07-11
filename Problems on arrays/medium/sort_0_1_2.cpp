@@ -17,17 +17,18 @@ void sort_0_1_2(int arr[], int n){
     {
       swap(arr[i],arr[r]);
       r--; 
+      // i++;
+    }  
+    else{
       i++;
-    }  else{
-    i++;  
-    } 
+    };
   } 
 }
  
 int main()
 {
-  // int arr[6] = {2,0,2,1,1,0};
-  int arr[6] = {2,0,2,1,2,0};
+  int arr[6] = {2,0,2,1,1,0};
+  // int arr[6] = {2,0,2,1,2,0};
  sort_0_1_2(arr,6);
   for (int i = 0; i <6; i++)
   {

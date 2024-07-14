@@ -39,18 +39,48 @@ using namespace std;
 // }
 
 // Optimal Approach - Using Kadane's Algorightm
-int maximum_subarray_sum(int arr[], int n){
-  int maxi = INT32_MIN;
-  int sum = 0; 
+// int maximum_subarray_sum(int arr[], int n){
+//   int maxi = INT32_MIN;
+//   int sum = 0; 
+//   for (int i = 0; i < n; i++)
+//   {
+//     sum+=arr[i];
+//     maxi = max(sum, maxi);
+//     if(maxi==sum){
+//       cout<<arr[i]<<" ";
+//     }
+//     if(sum<0) sum=0;
+// }
+//   return maxi;
+// }
+
+// Follow up question - Printing the subarray
+long long maximum_subarray_sum(int arr[], int n){
+  long long maxi = INT32_MIN;
+  long long sum = 0; 
+  int s = -1, e=-1;
+  int start;
   for (int i = 0; i < n; i++)
   {
+    if(sum==0) start=i;
     sum+=arr[i];
-    maxi = max(sum, maxi);
+    if(sum>maxi){
+      maxi = sum;
+
+      s = start;
+      e = i;
+    } 
     if(sum<0) sum=0;
 }
-  return maxi;
+cout<<"[";
+for (int i = s; i < e; i++)
+{
+  cout<<arr[i]<<", ";
 }
+cout<<"]";
 
+  return maxi;
+} 
 
 int main()
 {
@@ -58,7 +88,7 @@ int main()
 //  int arr[3] = {3,2,3};
 //  int arr[10] = {-2,1,-3,4,-1,2,1,-5,4};
  int arr[10] = {-2,-3,4,-1,-2,1,5,-3};
- cout<<maximum_subarray_sum(arr,10); 
+ cout<<endl<<maximum_subarray_sum(arr,10); 
   return 0;
 }
  

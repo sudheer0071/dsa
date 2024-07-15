@@ -3,21 +3,20 @@
 using namespace std;
 
 // Brute Force
-int buy_sell(int arr[], int n){
-  int maxpro = 0;
- for (int i = 0; i < n; i++)
- {
-  for (int j = i+1; j < n; j++)
-  {
-    if (arr[i]<arr[j])
-    {
-      maxpro = max(arr[j]-arr[i], maxpro);
-    }
-    
-  }
- }
-  return  maxpro;
-}
+// int buy_sell(int arr[], int n){
+//   int maxpro = 0;
+//  for (int i = 0; i < n; i++)
+//  {
+//   for (int j = i+1; j < n; j++)
+//   {
+//     if (arr[i]<arr[j])
+//     {
+//       maxpro = max(arr[j]-arr[i], maxpro);
+//     }
+//   }
+//  }
+//   return  maxpro;
+// }
 
 
 // Maybe Better?
@@ -50,6 +49,18 @@ int buy_sell(int arr[], int n){
 //   int profit = sell-buy;
 //   return  profit;
 // }
+
+// Optimal Approach
+
+int buy_sell(int arr[], int n){
+  int mini = INT16_MAX, maxpro = 0;
+  for (int i = 0; i < n; i++)
+  {
+    mini = min(arr[i], mini);
+    maxpro = max(arr[i] - mini, maxpro);
+  }
+  return maxpro;
+}
 
 int main()
 {

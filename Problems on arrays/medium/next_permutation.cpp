@@ -15,7 +15,7 @@ vector<int> next_permuation(vector<int> &arr){
   }
   if (ind==-1)
   {
-    reverse(arr.begin(), arr.end());
+    // reverse(arr.begin(), arr.end());
     return arr;
   }
 
@@ -27,13 +27,13 @@ for (int i = n-1; i < ind; i--)
   } 
 }
   
-  reverse(arr.begin() + ind + 1, arr.end());
-return arr;
+//   reverse(arr.begin() + ind + 1, arr.end());
+// return arr;
 } 
 
 int main()
 {
   vector<int> arr = {2,1,5,4,3,0,0};
-  next_permuation(arr)
-  return 0;
+  next_permuation(arr);
+  // return 0;
 }

@@ -37,6 +37,7 @@ vector<int> majorityElement(int arr[], int n){
     {
       count1++;
     }
+    
     else if (arr[i]==ele2)
     {
       count2++;

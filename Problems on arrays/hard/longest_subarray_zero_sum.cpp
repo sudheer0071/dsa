@@ -38,28 +38,41 @@ int zeroSum(int arr[], int n){
             maxi = i + 1; 
         }
         else {
-            if(maps.find(sum) != maps.end()) {
-                maxi = max(maxi, i - maps[sum]); 
+            if(maps.find(sum) != maps.end()) { 
+              len = i-maps[sum];
             }
-            else {
+            else { 
                 maps[sum] = i; 
             }
         }   
+                maxi = max(maxi, len); 
     }
 
  
   return maxi;
 } 
 
+void xooor(int arr[], int n){
+  int res=0;
+  for (int i = 0; i < n; i++)
+  {
+     res  = res^arr[i];
+  }
+  cout<<res;
+}
 
 int main()
 {
-  int arr[6] = {9, -3, 3, -1, 6, -5};
+  // int arr[6] = {9, -3, 3, -1, 6, -5};
   // int arr[8] = {6, -2, 2, -8, 1, 7, 4, -10};
   // int arr[8] = {15,-2,2,-8,1,7,10,23};
   // int arr[8] = {0};
   // int arr[8] = {1, 0, -5};
   // int arr[8] = {1, 3, -5, 6, -2};
-  cout<<zeroSum(arr, 5);
+  int arr[8] = {5,4,1,4,3,5,1,2};
+  // cout<<zeroSum(arr, 6);
+  // xooor(arr,  8);
+  int a = 3 ^ 2;
+  cout<<a;
   return 0;
 }

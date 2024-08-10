@@ -47,9 +47,7 @@ pair<int, int>first_last_occ(int arr[], int n, int t){
   if (arr[first+1] != t || first ==t)
   {
     return {-1,-1};
-  }
-  
-
+  } 
   return {first+1, last-1};
 }
 

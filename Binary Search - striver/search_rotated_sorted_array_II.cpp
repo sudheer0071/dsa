@@ -8,23 +8,32 @@ int rotated_search(int arr[], int n, int k){
   while (s<=e)
   {
   int mid = s + (e-s)/2;
-    if (arr[mid]==k) return mid ;
+    if (arr[mid]==k) return true ;
+
+    if (arr[s]==arr[mid] && arr[mid]== arr[e])
+    {
+      s = s+1;
+      e = e -1;
+      continue;
+    }
+    
+
     if (arr[s]<=arr[mid]) // left sorted
-    { 
+    {  
       if (arr[s] <=k && k<= arr[mid])
       {  
         cout<<arr[mid]<<endl;
       e = mid-1;
       }
-      else{
-      // cout<<"inside"<<endl;
+      else{ 
         s = mid+1;
       }
     } 
     
     else // right sorted 
     { 
-         if (arr[mid] <=k &&  k<= arr[n-1])
+      cout<<"inside right"<<endl;;
+         if (arr[mid] <=k &&  k<= arr[e])
       {  
         s = mid+1;
       }
@@ -33,20 +42,16 @@ int rotated_search(int arr[], int n, int k){
       }
     } 
   }
-    return -1; 
+    return false; 
 } 
  
 
  int main()
 {
- int arr[10] =  {4,5,6,7,0,1,2,3};
-//  int arr[10] =  {4,5,6,7,0,1,2};
-//  vector<int> arr =  {4,5,6,7,0,1,2};
-//  vector<int> arr = {1,3};
-//  vector<int> arr = {3,5,1};
-
-//  int arr[10] =  {1};
- cout<<rotated_search(arr,8, 1);
+//  int arr[10] =  {7, 8, 1, 2, 3, 3, 3, 4, 5, 6}; 
+ int arr[10] =  {1,0,1,1,1};  
+ 
+ cout<<rotated_search(arr,5, 0);
   return 0;
 }
  

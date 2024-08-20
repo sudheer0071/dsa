@@ -30,6 +30,7 @@ int minimun(int arr[], int n){
   }  
   return idx==n-1||idx<0? arr[0]: arr[idx+1];
 }
+
 int main()
 {
   // int arr[8] = {4,5,6,7,0,1,2,3};

@@ -36,17 +36,17 @@ int minimum_banana(int arr[], int n, int h)
   int max_ele = *max_element(arr, arr + n);
   int s = 1;
   int e = max_ele; 
-
+ cout<<e<<endl;
   while (s<=e)
   {
     
-   float mid = s + (e-s)/2;
+  int  mid = s + (e-s)/2;
   
   int sum = 0;
     for (int i = 0; i < n; i++)
     {
 
-      int hrs = ceil(arr[i] / mid);
+      int hrs = ceil((double)(arr[i]) / (double)(mid));
       sum += hrs;
       cout << arr[i] << "/" << mid << " = " << hrs << endl;
       k = mid;
@@ -73,9 +73,10 @@ int main()
 {
   // int arr[4] = {7, 15, 6, 3};
   // int arr[5] = {25, 12, 8, 14, 19};
-  int arr[5] = {3,6,7,11};
-  // int arr[5] = {312884470};
+  // int arr[5] = {3,6,7,11};
+  // int arr[5] = {312884470}; 
+  int arr[5] = {805306368, 805306368, 805306368};
 
-  cout << minimum_banana(arr, 4, 8);
+  cout << minimum_banana(arr, 3, 1000000000);
   return 0;
 }

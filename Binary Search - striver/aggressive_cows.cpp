@@ -32,21 +32,19 @@ bool canWePlace(int arr[], int n, int dist, int k){
 int min_max_dist(int arr[], int n, int k){
   sort(arr, arr+n);
   int max_d = arr[n-1]- arr[0];
-  int s = 1; int e = max_d;
-  int ans  = max_d;
+  int s = 1; int e = max_d; 
   while(s<=e)
   {
     int mid = s + (e-s)/2;
    if(canWePlace(arr, n, mid, k)==false) {
 
-   e = mid -1;
-    ans = mid -1;
+   e = mid -1; 
     }
    else {
     s = mid+1;
    }
   }
-  return ans;
+  return e;
 }
 
 int main()

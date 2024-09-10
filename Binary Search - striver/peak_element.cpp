@@ -32,9 +32,9 @@ int main()
   // int arr[10] = {1,2,3,4,5,6,7,8,5,1};
   // int arr[10] = {1,2,1,3,5,6,4};
   // int arr[10] = {1, 2, 3, 4, 5};
-  int arr[10] = {3, 4, 3, 2, 1};
-  // int arr[10] = {1};
+  // int arr[10] = {3, 4, 3, 2, 1};
+  int arr[10] = {1};
   // int arr[10] = {-2147483648,-2147483647};
-  cout<<peak_element(arr, 5);
+  cout<<peak_element(arr, 1);
   return 0;
 }

@@ -34,7 +34,7 @@ int median(int arr[][3], int n, int m){
   for (int i = 0; i < n; i++)
   {
     s = min(s,arr[i][0]);
-    e = max(e, arr[i][n-1]); 
+    e = max(e, arr[i][m-1]); 
   } 
   while (s<=e)
   {

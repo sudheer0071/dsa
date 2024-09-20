@@ -50,6 +50,7 @@ string reverse(string s){
     i++;
   }  
  
+ 
  if(str!=""){
   if(res!="")  res= str+ " " + res;
      else res=str;

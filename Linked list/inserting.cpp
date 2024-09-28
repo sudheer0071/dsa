@@ -21,17 +21,40 @@ class Node
   } 
 };
 
-
-Node* converArr2LL(vector<int> &arr){
-  Node* head = new Node(arr[0]);
+Node* convertArr2LL(vector<int> &arr){
+  Node* head  = new Node(arr[0]);
   Node* mover = head;
-  for (int  i = 1; i < arr.size(); i++)
+  for (int i = 1; i < arr.size(); i++)
   {
-    Node* temp = new Node(arr[i]);
-    mover->next =  temp;
-    mover=temp;
+     Node* temp = new Node( arr[i]);
+     mover->next = temp;
+     mover = temp;
   }
-  return head;
+return head;  
+}
+int lengthOfLL(Node* head){
+int   count =0;
+  while (head)
+  {
+    count++;
+    head = head->next;
+  }
+  return count;
+} 
+
+bool checkIfPresent(Node* head, int k){
+
+  while (head!=NULL)
+  {
+    if (head->data == k)
+    {
+       return true;
+    }
+    
+    // cout<< head->data<<" ";
+    head = head->next;
+  }
+  return false;
 }
 
 void print(Node* head){
@@ -97,34 +120,59 @@ Node* insertBeforeValue(Node* head,int el, int val){
   return head; 
 }
 
-Node* deleteElement(Node* head, int k){
-  if(head == NULL) return head; 
+Node* deleteNode(Node* head, int k){
+  if (head==NULL) return head;
   Node* temp = head;
-  if(head->data==k){ 
-    head= head->next;
-    free(temp);
+  Node* prev = NULL;
+  if (temp->data==k)
+  {
+    head=head->next;
+    free (temp);
     return head;
   }
-   int count=0; Node* prev=NULL;
-  while (temp!=NULL)
-  {  
-    if(temp->data==k){
-      prev->next = prev->next->next;
+   
+   while (temp!=NULL)
+   {
+    if (temp->data==k)
+    {
+      prev->next = temp->next;
       free(temp);
       break;
     }
-    prev=temp;
-    temp=temp->next;
-  }  
-  return head; 
+    prev = temp;
+    temp = temp->next;
+   }
+   return head;
+  
+}
+ 
+Node* deleteHead(Node* head){
+  if(head==NULL) return head;
+  Node* temp = head;
+  head = head->next;
+  delete temp;
+  return head;
+}
+
+Node* deleteTail(Node* head){
+  if(head==NULL||head->next==NULL) return head;
+  Node* temp = head;
+  while (temp->next->next!=NULL)
+  {
+    temp = temp->next;
+    delete temp->next;
+  }
+  return head;
 }
 
 int main()
 {
   vector<int> arr={32,4,7,8};
-  Node* head = converArr2LL(arr);  
-  head = insertBeforeValue(head,23,7);
+  Node* head = convertArr2LL(arr);  
+  // head = insertBeforeValue(head,23,7);
 //  head = new Node(6,head);
-  print(head);
+// cout<<checkIfPresent(head,7);
+Node* newHead =  deleteNode(head,32);
+  print(newHead);
   return 0;
 }

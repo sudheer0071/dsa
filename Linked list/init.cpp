@@ -10,12 +10,12 @@ class Node
   Node* next;
 
 // constructor
-  public:
-  Node(int data1, int age1, Node* next1){
-       data=data1;
-       age=age1;
-       next = next1;
-  }
+  // public:
+  // Node(int data1, int age1, Node* next1){
+  //      data=data1;
+  //      age=age1;
+  //      next = next1;
+  // }
   public:
   Node(int data1 , int age1){
        age=age1;

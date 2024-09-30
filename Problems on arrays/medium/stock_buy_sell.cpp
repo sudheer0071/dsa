@@ -58,6 +58,7 @@ int buy_sell(int arr[], int n){
   {
     mini = min(arr[i], mini);
     maxpro = max(arr[i] - mini, maxpro);
+    cout<<"i = "<<i<<", arr[i] = "<<arr[i]<<", mini = "<<mini<<", maxpro = "<<maxpro<<endl;
   }
   return maxpro;
 }

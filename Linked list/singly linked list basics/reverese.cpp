@@ -43,18 +43,35 @@ void print(Node* head){
  
 // Brute force Approach - using stack 
 
+// Optimal Approacch 1
+// Node* reverse(Node* head){
+//   Node* temp =  head;
+//   Node* last = NULL;
+//   while (temp!=NULL)
+//   {
+//     cout<<"sindie"<<endl;
+//     Node* front = temp->next;
+//      temp->next = last; 
+//      last = temp;
+//      temp = front;
+//   }
+//   return last;
+// } 
+
+
+// Optimal Approacch 2
 Node* reverse(Node* head){
-  Node* temp =  head;
-  Node* last = NULL;
-  while (temp!=NULL)
-  {
-    cout<<"sindie"<<endl;
-    Node* front = temp->next;
-     temp->next = last; 
-     last = temp;
-     temp = front;
-  }
-  return last;
+
+  if (head == NULL || head->next == NULL) {
+        return head;
+    }
+  
+  Node* newHead = reverse(head->next);
+
+  Node* front = head->next;
+  front->next = head;
+  head->next = nullptr;
+  return newHead;
 } 
 
 int main()

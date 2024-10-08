@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <map>
 using namespace std;
  
 class Node{
@@ -40,45 +41,39 @@ void print(Node* head){
   }
   
 }
- 
-// Brute force Approach - using stack 
 
-// Optimal Approacch 1
-// Node* reverse(Node* head){
-//   Node* temp =  head;
-//   Node* last = NULL;
+// Brute force Appraoch - store in hashmap
+// bool detectLoop(Node* head){
+//   map<Node*, int> mp;
+//   Node* temp = head;
 //   while (temp!=NULL)
 //   {
-//     cout<<"sindie"<<endl;
-//     Node* front = temp->next;
-//      temp->next = last; 
-//      last = temp;
-//      temp = front;
+//     if(mp.find(temp)!=mp.end()) return true;
+//       mp[temp]=1;
+//       temp=temp->next;
 //   }
-//   return last;
+//   return false;
 // } 
 
-
-// Optimal Approacch 2
-Node* reverse(Node* head){
-
-  if (head == NULL || head->next == NULL) {
-        return head;
-    }
-  
-  Node* newHead = reverse(head->next);
-
-  Node* front = head->next;
-  front->next = head;
-  head->next = nullptr;
-  return newHead;
+// Optimal Appraoch - Using Tortoise and Here and algo
+bool detectLoop(Node* head){
+  map<Node*, int> mp;
+  Node* slow = head;
+  Node* fast = head;
+  while (fast!=nullptr || fast->next!=nullptr)
+  {
+     slow = slow->next;
+     fast = fast->next->next;
+     if(fast == slow) return true;
+  }
+  return false;
 } 
 
 int main()
 {
-  vector<int> arr = {1,2,3,4,2};
+  vector<int> arr = {1, 2, 3, 4, 5};
   Node* head = convertArr2LL(arr);
-  Node* new_head = reverse(head);
-  print(new_head);
+  cout<<detectLoop(head);
+  // print(new_head);
   return 0;
 }

@@ -16,8 +16,7 @@ void sort_0_1_2(int arr[], int n){
     else if (arr[i] == 2)
     {
       swap(arr[i],arr[r]);
-      r--; 
-      // i++;
+      r--;  
     }  
     else{
       i++;
@@ -28,9 +27,9 @@ void sort_0_1_2(int arr[], int n){
 int main()
 {
   // int arr[6] = {2,0,2,1,1,0};
-  int arr[6] = {2,0,2,1,2,0};
- sort_0_1_2(arr,6);
-  for (int i = 0; i <6; i++)
+  int arr[10] = {1,0,2,1,2,0,2,2};
+ sort_0_1_2(arr,8);
+  for (int i = 0; i <8; i++)
   {
     cout<<arr[i]<<" ";
   }

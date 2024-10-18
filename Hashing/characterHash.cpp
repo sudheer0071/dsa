@@ -40,3 +40,12 @@ for (int i = 0; i < 26; i++)
 
   return 0;
 }
+
+#include <iostream>
+#include <vector>
+using namespace std;
+ 
+int main()
+{
+  return 0;
+}

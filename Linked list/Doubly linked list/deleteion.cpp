@@ -91,8 +91,7 @@ Node *removeKthElement(Node *head, int k)
   else if (next1 == NULL)
     return removeTail(head);
  else{
-  prev1->next = next1;
-  next1->prev = prev1;
+ 
   temp->next = nullptr;
   temp->prev = nullptr;
   delete temp;

@@ -40,8 +40,8 @@ int remove_duplicate(int arr[],int n){
 
 int main()
 {
-  int arr[7] = {1,1,2,2,3,4,4};
-  int k = remove_duplicate(arr,7);
+  int arr[9] = {1,1,1,2,3,4,5,5};
+  int k = remove_duplicate(arr,8);
   for (int i = 0; i < k; i++)
   {
     cout<<arr[i]<<" ";

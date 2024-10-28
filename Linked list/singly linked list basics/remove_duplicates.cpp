@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <map>
 using namespace std;
  
 class Node{
@@ -40,46 +41,32 @@ void print(Node* head){
   }
   
 }
- 
-// Brute force Approach - using stack 
 
-// Optimal Approacch 1
-// Node* reverse(Node* head){
-//   Node* temp =  head;
-//   Node* last = NULL;
-//   while (temp!=NULL)
-//   {
-//     cout<<"sindie"<<endl;
-//     Node* front = temp->next;
-//      temp->next = last; 
-//      last = temp;
-//      temp = front;
-//   }
-//   return last;
-// } 
+// Approach
+Node* removeDuplicates(Node* head){
+  Node* t1 = head;
+  Node* t2 = t1->next;
+  Node* prev = NULL;
 
-
-// Optimal Approacch 2
-Node* reverse(Node* head){
-
-  if (head == NULL || head->next == NULL) {
-        return head;
+  while (t2!=NULL)
+  {
+    if(t1->data!=t2->data){
+      prev->next = t2;
+      t1 = t1->next;
+    } else{
+      t2 = t2->next;
     }
-  
-  Node* newHead = reverse(head->next);
-
-  Node* front = head->next;
-  front->next = head;
-  head->next = nullptr;
-  return newHead;
-} 
-
+      prev = t1;
+  }
+  t1->next=nullptr;
+  return head;
+}
+ 
 int main()
 {
-  vector<int> arr = {1,2,3,4,2};
+  vector<int> arr = {1,2,3,3,4,4,5};
   Node* head = convertArr2LL(arr);
-  Node* new_head = reverse(head);
+  Node* new_head = removeDuplicates(head);
   print(new_head);
   return 0;
 }
- 

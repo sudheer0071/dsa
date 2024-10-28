@@ -64,7 +64,7 @@ void print(Node* head){
  Node*  rotate(Node* head, int k){
 if(head==NULL || head->next == NULL) return NULL;
    Node* temp = head;
-   int len = 0;
+   int len = 1;
    while (temp->next!=NULL)
    {
     ++len;
@@ -74,14 +74,11 @@ if(head==NULL || head->next == NULL) return NULL;
    temp->next = head;
   int cut = 0; 
   if(len>k){
-    cut = len - k;
-    cout<<len<<endl;
+    cut = len - k; 
   }else{
     cut = k%len;
-  }
-
-int cnt = 0; 
- while (cut--) temp->next = head;
+  } 
+ while (cut--) temp = temp->next;
  head = temp->next;
  temp->next = NULL;
  return head;

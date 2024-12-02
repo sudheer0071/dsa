@@ -24,3 +24,4 @@ int main()
   generate(0,ans, arr);
   return 0;
 }
+     

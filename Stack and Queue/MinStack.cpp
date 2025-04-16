@@ -1,19 +1,29 @@
-class MinStack {
+#include <iostream>
+#include <vector>
+#include <stack>
+using namespace std;
+
+ class MinStack {
   public:
-       stack < long long > st;
-    long long mini;
-      MinStack() {
+       stack < long long > st;  
+       long long mini = INT8_MAX;
+
+       MinStack() {
             while (st.empty() == false) st.pop();
-        mini = INT_MAX;
+       
       }
       
       void push(int val) {
+          
           if(st.empty()){
               mini = val;
               st.push(val);
-          } else {
+
+    long long mini;
+              } else {
               if(mini > val) {
-                  st.push(2*val - mini);
+                st.push(2LL * val - mini);
+  
                   mini = val;
               } else {
                   st.push(val);
@@ -39,14 +49,13 @@ class MinStack {
       
       int getMin() {
           return mini;
-      }
+      } 
   };
   
-  /**
-   * Your MinStack object will be instantiated and called as such:
-   * MinStack* obj = new MinStack();
-   * obj->push(val);
-   * obj->pop();
-   * int param_3 = obj->top();
-   * int param_4 = obj->getMin();
-   */
+  
+int main()
+{
+  return 0;
+}
+
+

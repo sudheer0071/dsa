@@ -69,16 +69,17 @@ int totalWater1(vector<int> &arr)
   {
     if (arr[i] < pref[i] && arr[i] < suf[i])
     {
-      total += min(pref[i], suf[i]) - arr[i];
+      total += min(pref[i], suf[i]) - arr[i];  
     }
   }
+ 
   return total;
 }
 
-// Optimal Approach - 2 Pointers
 
+// Optimal Approach - 2 Pointers
 int totalWater2(vector<int> &arr)
-{
+{ 
   int n = arr.size();
   int leftMax=0, righMax=0, total = 0;
   int l = 0, r = n - 1;

@@ -39,24 +39,24 @@ int maximal_rect(vector<vector<int>> mat)
 {
   int n = mat.size();
   int m = mat[1].size();
- 
 
   int maxArea = 0;
-  vector<vector<int>> pSum(n, vector<int>(m,0)); 
+  vector<vector<int>> pSum(n, vector<int>(m, 0));
   for (int j = 0; j < m; j++)
-  { 
+  {
     int sum = 0;
     for (int i = 0; i < n; i++)
     {
-      sum += mat[i][j]; 
-      if (mat[i][j] == 0){
+      sum += mat[i][j];
+      if (mat[i][j] == 0)
+      {
         sum = 0;
       }
       pSum[i][j] = sum;
     }
-  } 
+  }
   for (int i = 0; i < n; i++)
-  { 
+  {
     maxArea = max(maxArea, largest_area(pSum[i]));
   }
 
@@ -69,7 +69,6 @@ int main()
                            {1, 0, 1, 1, 1},
                            {1, 1, 1, 1, 1},
                            {1, 0, 0, 1, 0}};
-
   cout << maximal_rect(a);
   return 0;
 }
